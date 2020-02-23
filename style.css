@@ -1,0 +1,50 @@
+/* RESET GENERAL */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: papayawhip;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* On donne une hauteur de 100% de l'écran, les éléments d'alignent au centre de la page grâce aux propriétés FLEXBOX */
+    height: 100vh; 
+
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* Style  du bouton levé :*/
+.bouton:link,
+.bouton:visited{
+    /* Utile pour positionner l'ombre qui plus tard donnera l'impression de 3D : */
+    position: relative;
+    /* Décoration du bouton : */
+    font-size: 60px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0099fa;
+    padding: 10px 30px;
+    border: 1px solid #53bdff;
+
+    /* Ombre qui donne l'impression de 3D : */
+    box-shadow: 0px 10px 0px #003b60;
+}
+
+/* Création de l'effet : au clic, le bouton descend. Il faut donc le déplacer vers le bas ET REDUIRE L'OMBRE */
+.bouton:active{
+    top: 8px;
+    box-shadow: 0px 2px 0px #003b60;
+}
